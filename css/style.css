@@ -1,0 +1,96 @@
+
+:root{
+  --sc-bg:#f8f7fc;      
+  --sc-ink:#1c1230;     
+  --sc-deep:#1d1033;    
+  --sc-violet:#5b2fc9;
+  --sc-lilac:#8b5cf6;
+  --sc-mist:#ebe6f7;
+  --bs-body-font-family:"Nunito Sans",system-ui,sans-serif;
+  --bs-body-color:var(--sc-ink);
+  --bs-body-bg:var(--sc-bg);
+  --cut:18px;          
+}
+html{scroll-behavior:smooth}
+section[id],header[id]{scroll-margin-top:72px}
+h1,h2,h3,.h5,.h6,.sc-brand,.btn{font-family:"Rajdhani",sans-serif}
+
+/* Navbar: garis ungu tipis di bawah */
+.sc-nav{background:rgba(248,247,252,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--sc-mist);box-shadow:0 2px 0 -1px var(--sc-lilac)}
+.sc-brand{font-weight:700;font-size:1.6rem;color:var(--sc-deep)!important;letter-spacing:.5px}
+.sc-brand span{color:var(--sc-violet);margin-left:.3rem}
+.sc-nav .nav-link{font-weight:700;color:var(--sc-ink)}
+.sc-nav .nav-link:hover,.sc-nav .nav-link.active{color:var(--sc-violet)}
+
+/* Tombol: sudut terpotong */
+.btn-sc,.btn-outline-sc{font-weight:700;letter-spacing:.6px;border-radius:0;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
+.btn-sc{background:var(--sc-violet);color:#fff;border:0}
+.btn-sc:hover,.btn-sc:focus-visible{background:var(--sc-deep);color:#fff}
+.btn-outline-sc{background:var(--sc-mist);color:var(--sc-violet);border:0}
+.btn-outline-sc:hover,.btn-outline-sc:focus-visible{background:var(--sc-violet);color:#fff}
+.btn:focus-visible,.form-control:focus,.form-select:focus{outline:3px solid var(--sc-lilac);outline-offset:2px;box-shadow:none}
+
+/* Hero */
+.sc-hero{padding:8rem 0 4rem}
+.sc-tag{display:inline-block;font-weight:700;color:var(--sc-violet);border-left:4px solid var(--sc-lilac);padding-left:.6rem;margin-bottom:1rem}
+.sc-title{font-weight:700;line-height:1.02;color:var(--sc-deep);max-width:14ch}
+.sc-lead{max-width:48ch;margin:1.2rem 0 1.8rem;color:#463c5e}
+.sc-portal{position:relative;background:linear-gradient(160deg,var(--sc-deep),#3a1f7a);aspect-ratio:1/1;max-width:420px;margin:auto;
+  clip-path:polygon(0 0,calc(100% - 56px) 0,100% 56px,100% 100%,56px 100%,0 calc(100% - 56px));display:grid;place-items:center}
+.sc-portal::before{content:"";position:absolute;width:78%;aspect-ratio:1;border:2px dashed rgba(139,92,246,.7);border-radius:50%;animation:putar 30s linear infinite}
+.sc-cup{width:72%;position:relative}
+.wisp{fill:none;stroke:#c4b0ff;stroke-width:6;stroke-linecap:round;opacity:.0;animation:asap 4s ease-in-out infinite}
+.w2{animation-delay:.8s}.w3{animation-delay:1.6s}
+@keyframes asap{0%{opacity:0;transform:translateY(14px)}40%{opacity:.9}100%{opacity:0;transform:translateY(-14px)}}
+@keyframes putar{to{transform:rotate(360deg)}}
+
+/* Alert promo */
+.sc-alert-wrap{padding-bottom:1rem}
+.alert-sc{background:var(--sc-mist);color:var(--sc-deep);border:0;border-left:6px solid var(--sc-violet);border-radius:0;margin:0}
+
+/* Section dan judul */
+.sc-section{padding:4.5rem 0}
+.sc-h2{font-weight:700;font-size:2.2rem;color:var(--sc-deep);position:relative;padding-bottom:.6rem}
+.sc-h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:4px;background:var(--sc-lilac);clip-path:polygon(0 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.sc-sub{color:#5a5072;margin-bottom:2rem}
+
+/* Card */
+.sc-card{border:0;border-radius:0;background:#fff;box-shadow:0 10px 30px -18px rgba(29,16,51,.45);
+  clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,0 100%);border-left:4px solid var(--sc-lilac)}
+.sc-photo{width:100%;height:170px;object-fit:cover;display:block}
+.sc-price{font:700 1.4rem "Rajdhani",sans-serif;color:var(--sc-violet)}
+.sc-badge{background:var(--sc-violet);color:#fff;border-radius:0;font:700 .8rem "Rajdhani",sans-serif;letter-spacing:.5px;vertical-align:middle;margin-left:.3rem}
+.sc-photo{width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--sc-mist);display:block}
+
+/* Tentang */
+.sc-about{background:var(--sc-mist)}
+.sc-stat{background:#fff;padding:1.2rem .5rem;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.sc-stat b{display:block;font:700 2.6rem/1 "Rajdhani",sans-serif;color:var(--sc-violet)}
+.sc-stat span{font-size:.9rem;color:#5a5072}
+
+/* Form */
+.sc-form{background:#fff;padding:1.6rem;border-top:4px solid var(--sc-lilac);box-shadow:0 10px 30px -18px rgba(29,16,51,.45)}
+.form-control,.form-select{border-radius:0;border-color:#cfc6e6}
+.form-label{font-weight:700}
+
+/* Modal */
+.sc-modal{border:0;border-radius:0;border-top:5px solid var(--sc-violet)}
+.sc-modal .modal-header,.sc-modal .modal-footer{border-color:var(--sc-mist)}
+
+/* Footer */
+.sc-footer{background:var(--sc-deep);color:#d9d0f0;padding:3rem 0 1.5rem;border-top:4px solid var(--sc-lilac)}
+.sc-footer .sc-brand{color:#fff!important}
+.sc-footer .sc-brand span{color:#b79cff}
+.sc-footer h3{color:#fff;font-weight:700}
+.sc-footer hr{border-color:rgba(255,255,255,.2)}
+
+@media (max-width:575.98px){
+  .sc-hero{padding-top:6.5rem}
+  .sc-h2{font-size:1.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .wisp{animation:none;opacity:.8}
+  .sc-portal::before{animation:none}
+  html{scroll-behavior:auto}
+}
